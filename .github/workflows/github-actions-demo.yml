@@ -16,6 +16,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: gh run view -j "Explore-GitHub-Actions" --log
+      - run: gh run view ${{ github.run_id }} --log
         env:
           GH_TOKEN: ${{ github.token }}
